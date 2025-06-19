@@ -1,1 +1,56 @@
-<h1>JP'S Music</h1>
+<!-- proyecto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda Virtual JP'S Music</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header>
+  <div class="logo">JP'S Music</div>
+  <input type="text" id="buscador" placeholder="Buscar productos..." />
+  <nav>
+    <button id="btnCarrito" class="btn-carrito">
+      <img src="carrito-de-compras.png" alt="Carrito" style="width: 24px; height: 24px; vertical-align: middle;" />
+      <span id="cantidadCarrito">0</span>
+    </button>
+    <a href="carrito.html" class="btn-ir-carrito">Carrito</a>
+  </nav>
+</header>
+
+<main>
+  <aside id="menuLateral">
+    <h3>Categorías</h3>
+    <ul id="listaCategorias">
+      <li data-categoria="cuerda" class="activo">Cuerda</li>
+      <li data-categoria="viento">Viento</li>
+      <li data-categoria="percusion">Percusión</li>
+    </ul>
+
+    <div id="filtrosCategoria">
+      <h4>Marcas</h4>
+      <div id="contenedorMarcas"></div>
+    </div>
+
+    <div class="filtro-precio">
+      <h4 style="color: #e6b93a; font-weight: 700;">Precio</h4>
+      <div class="rangos">
+        <input type="number" id="precioMin" placeholder="Desde" min="0" />
+        <span>-</span>
+        <input type="number" id="precioMax" placeholder="Hasta" min="0" />
+      </div>
+    </div>
+
+    <button id="btnFiltrar">Filtrar</button>
+  </aside>
+
+  <section id="productos"></section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
